@@ -1,0 +1,76 @@
+<div class="plr-15">
+  <div class="d-block bg_white border-radius-10 ptrbl_15 mb-25">
+    <div class="table_top_filter clearfix">
+      <div class="pull-left table_heading">
+        <h1 style="text-align: center;">List User</h1>
+      </div>
+      <div class="pull-right clearfix">
+        <div class="d-inlineblock table_search_bg" style="margin-left: 910px;">
+          <input
+            type="text"
+            class="table_search"
+            placeholder="Search here.."
+            [(ngModel)]="searchKeyword"
+            (ngModelChange)="filterData($event)"
+          />
+          <i class="icon-search1"></i>
+        </div>
+        <div class="ml-3 d-inlineblock">
+          <span class="pr-2 light_text">Show</span>
+          <select
+            class="table_lineselect custom-select"
+            (change)="changePageSize($event)"
+          >
+            <option selected>5</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+          </select>
+        </div>
+        <button class="btn_primary ml-3 float-right" style="margin-left: 1010px;" (click)="OpenContact($event)">Add Contact</button>
+      </div>
+    </div>
+    <div class="table_bg">
+      <table class="table_style1" cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th style="width: 15%">First Name</th>
+            <th style="width: 10%">Last Name</th>
+            <th style="width: 15%">Email</th>
+            <th style="width: 15%">Address</th>
+            <th style="width: 10%">City</th>
+            <th style="width: 10%">State</th>
+            <th style="width: 10%">Country</th>
+            <th style="width: 10%">Phone Number</th>
+            <th style="width: 5%" class="text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of data">
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.city }}</td>
+            <td>{{ user.state }}</td>
+            <td>{{ user.country }}</td>
+            <td>{{ user.phoneNumber }}</td>
+            <td>
+              <div class="dropdown">
+                <button class="action_link dropbtn">&#8226;&#8226;&#8226;</button>
+                <div class="dropdown-content">
+                  <a (click)="navigateToEdit($event, user.contactId)">
+                    <i class="icon-edit">&#9998;</i><span>Edit</span>
+                  </a>
+                  <a (click)="removeUser(user.contactId)">
+                    <i class="icon-delete">&#128465;</i><span>Delete</span>
+                  </a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

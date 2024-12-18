@@ -1,0 +1,179 @@
+/* Global Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.add_pharmacy_container {
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.add_pharmacy_header_container {
+    background-color: #1998F1;
+    color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.add_pharmacy_header_container .head {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Form Styling */
+.add_pharmacy_form_container {
+    padding: 20px;
+}
+
+.common-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input_label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #f9f9f9;
+}
+
+input:focus {
+    border-color: #1998F1;
+    background-color: #fff;
+}
+
+/* Button Styling */
+.btn {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+    transition: all 0.3s ease;
+    width: 48%;
+    margin-top: 20px;
+}
+
+.pre {
+    background-color: #ddd;
+    color: #333;
+}
+
+.next {
+    background-color: #1998F1;
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Button Wrapper */
+.button-check-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #ff3b3b;
+}
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 768px) {
+    .add_pharmacy_container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .add_pharmacy_header_container {
+        padding: 15px;
+    }
+
+    .add_pharmacy_header_container .head {
+        font-size: 20px;
+    }
+
+    .common-input {
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+
+    .input_label {
+        margin-bottom: 5px;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .button-check-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pre, .next {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .close-btn {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .add_pharmacy_container {
+        width: 70%;
+    }
+
+    .add_pharmacy_header_container .head {
+        font-size: 22px;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .button-check-wrapper {
+        width: 100%;
+    }
+}

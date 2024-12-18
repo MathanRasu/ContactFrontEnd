@@ -1,0 +1,123 @@
+/* General Table Styling */
+.table_style1 {
+    width: 100%;
+    border-collapse: collapse; /* Ensures no gaps between borders */
+    table-layout: auto; /* Automatically adjusts column widths */
+    font-family: "DM Sans", sans-serif;
+    margin: 15px 0;
+}
+
+.table_style1 th,
+.table_style1 td {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #2D3842;
+    border: 1px solid #DFE2E5; /* Adds table borders */
+    vertical-align: middle; /* Ensures vertical alignment */
+    background-color: #ffffff;
+}
+
+.table_style1 th {
+    font-weight: 600;
+    background-color: #f2f2f2; /* Header background */
+    text-transform: uppercase; /* Optional for consistency */
+}
+
+.table_style1 tr:nth-child(even) td {
+    background-color: #f9f9f9; /* Zebra striping for better readability */
+}
+
+.table_style1 tr:hover td {
+    background-color: #f1f1f1; /* Hover effect for rows */
+}
+
+/* Rounded Corners for Table */
+.table_style1 tr th:first-child,
+.table_style1 tr td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.table_style1 tr th:last-child,
+.table_style1 tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .table_style1 {
+        font-size: 12px;
+    }
+
+    .table_style1 th,
+    .table_style1 td {
+        padding: 8px;
+    }
+}
+
+/* Dropdown container styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Button to trigger dropdown */
+.action_link {
+    background: none;
+    border: none;
+    font-size: 18px; /* Adjust the size of the dots */
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Align dropdown to the right of the button */
+    background-color: #fff;
+    min-width: 150px; /* Adjust as needed */
+    border: 1px solid #DFE2E5;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow: hidden;
+    padding: 0; /* Remove extra padding */
+}
+
+/* Dropdown item styling */
+.dropdown-content a {
+    display: flex; /* Align icons and text horizontally */
+    align-items: center; /* Vertically center items */
+    color: #2D3842;
+    text-decoration: none;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8f8f8;
+    color: #1998F1;
+}
+
+/* Icon inside dropdown items */
+.dropdown-content i {
+    font-size: 16px; /* Adjust icon size */
+    margin-right: 8px; /* Space between icon and text */
+    color: #6c757d; /* Neutral icon color */
+}
+
+/* Show dropdown when clicking */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Fix dropdown position for small screens */
+@media screen and (max-width: 768px) {
+    .dropdown-content {
+        min-width: 120px;
+    }
+}
